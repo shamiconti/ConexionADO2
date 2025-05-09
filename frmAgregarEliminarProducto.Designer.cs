@@ -39,12 +39,12 @@
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.grpAgregarProducto = new System.Windows.Forms.GroupBox();
-            this.grpEliminarProducto = new System.Windows.Forms.GroupBox();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.lblNombreEliminar = new System.Windows.Forms.Label();
             this.mskStock = new System.Windows.Forms.MaskedTextBox();
             this.mskPrecio = new System.Windows.Forms.MaskedTextBox();
+            this.grpEliminarProducto = new System.Windows.Forms.GroupBox();
             this.cmbEliminarProducto = new System.Windows.Forms.ComboBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.lblCodigo = new System.Windows.Forms.Label();
             this.grpAgregarProducto.SuspendLayout();
             this.grpEliminarProducto.SuspendLayout();
             this.SuspendLayout();
@@ -119,6 +119,7 @@
             // 
             // cmbCategoria
             // 
+            this.cmbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategoria.FormattingEnabled = true;
             this.cmbCategoria.Location = new System.Drawing.Point(104, 208);
             this.cmbCategoria.Name = "cmbCategoria";
@@ -158,39 +159,6 @@
             this.grpAgregarProducto.TabStop = false;
             this.grpAgregarProducto.Text = "Agregar Producto";
             // 
-            // grpEliminarProducto
-            // 
-            this.grpEliminarProducto.Controls.Add(this.cmbEliminarProducto);
-            this.grpEliminarProducto.Controls.Add(this.btnEliminar);
-            this.grpEliminarProducto.Controls.Add(this.lblNombreEliminar);
-            this.grpEliminarProducto.Location = new System.Drawing.Point(327, 12);
-            this.grpEliminarProducto.Name = "grpEliminarProducto";
-            this.grpEliminarProducto.Size = new System.Drawing.Size(302, 105);
-            this.grpEliminarProducto.TabIndex = 11;
-            this.grpEliminarProducto.TabStop = false;
-            this.grpEliminarProducto.Text = "Eliminar Producto";
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.LightSlateGray;
-            this.btnEliminar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnEliminar.Location = new System.Drawing.Point(104, 68);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(148, 28);
-            this.btnEliminar.TabIndex = 10;
-            this.btnEliminar.Text = "ELIMINAR";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // lblNombreEliminar
-            // 
-            this.lblNombreEliminar.AutoSize = true;
-            this.lblNombreEliminar.Location = new System.Drawing.Point(6, 39);
-            this.lblNombreEliminar.Name = "lblNombreEliminar";
-            this.lblNombreEliminar.Size = new System.Drawing.Size(68, 18);
-            this.lblNombreEliminar.TabIndex = 0;
-            this.lblNombreEliminar.Text = "Nombre:";
-            // 
             // mskStock
             // 
             this.mskStock.Location = new System.Drawing.Point(104, 165);
@@ -209,13 +177,47 @@
             this.mskPrecio.TabIndex = 7;
             this.mskPrecio.ValidatingType = typeof(int);
             // 
+            // grpEliminarProducto
+            // 
+            this.grpEliminarProducto.Controls.Add(this.cmbEliminarProducto);
+            this.grpEliminarProducto.Controls.Add(this.btnEliminar);
+            this.grpEliminarProducto.Controls.Add(this.lblCodigo);
+            this.grpEliminarProducto.Location = new System.Drawing.Point(327, 12);
+            this.grpEliminarProducto.Name = "grpEliminarProducto";
+            this.grpEliminarProducto.Size = new System.Drawing.Size(302, 105);
+            this.grpEliminarProducto.TabIndex = 11;
+            this.grpEliminarProducto.TabStop = false;
+            this.grpEliminarProducto.Text = "Eliminar Producto";
+            // 
             // cmbEliminarProducto
             // 
+            this.cmbEliminarProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEliminarProducto.FormattingEnabled = true;
             this.cmbEliminarProducto.Location = new System.Drawing.Point(104, 36);
             this.cmbEliminarProducto.Name = "cmbEliminarProducto";
             this.cmbEliminarProducto.Size = new System.Drawing.Size(149, 26);
             this.cmbEliminarProducto.TabIndex = 12;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnEliminar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnEliminar.Location = new System.Drawing.Point(104, 68);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(148, 28);
+            this.btnEliminar.TabIndex = 10;
+            this.btnEliminar.Text = "ELIMINAR";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Location = new System.Drawing.Point(6, 39);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(59, 18);
+            this.lblCodigo.TabIndex = 0;
+            this.lblCodigo.Text = "Código:";
             // 
             // frmAgregarEliminarProducto
             // 
@@ -254,7 +256,7 @@
         private System.Windows.Forms.GroupBox grpAgregarProducto;
         private System.Windows.Forms.GroupBox grpEliminarProducto;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Label lblNombreEliminar;
+        private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.MaskedTextBox mskStock;
         private System.Windows.Forms.MaskedTextBox mskPrecio;
         private System.Windows.Forms.ComboBox cmbEliminarProducto;

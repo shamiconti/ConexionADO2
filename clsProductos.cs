@@ -33,24 +33,6 @@ namespace pryContiConexionBD
         {
             using (SqlConnection conexion = clsConexion.ObtenerConexion())
             {
-                string query = "SELECT Codigo, Nombre FROM Productos";
-                SqlCommand comando = new SqlCommand(query, conexion);
-                SqlDataAdapter da = new SqlDataAdapter(comando);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-
-                combo.DisplayMember = "Nombre";
-                combo.ValueMember = "Codigo";
-                combo.DataSource = dt;
-
-                combo.SelectedIndex = -1; 
-            }
-        }
-
-        public void CargarComboModificarDescripcion(ComboBox combo)
-        {
-            using (SqlConnection conexion = clsConexion.ObtenerConexion())
-            {
                 string query = "SELECT Codigo FROM Productos";
                 SqlCommand comando = new SqlCommand(query, conexion);
                 SqlDataAdapter da = new SqlDataAdapter(comando);
@@ -61,7 +43,7 @@ namespace pryContiConexionBD
                 combo.ValueMember = "Codigo";
                 combo.DataSource = dt;
 
-                combo.SelectedIndex = -1;
+                combo.SelectedIndex = -1; 
             }
         }
 

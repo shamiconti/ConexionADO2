@@ -35,13 +35,13 @@
             this.lblNuevoPrecio = new System.Windows.Forms.Label();
             this.cmbModificarPrecio = new System.Windows.Forms.ComboBox();
             this.btnModifcar = new System.Windows.Forms.Button();
-            this.lblNombrePrecio = new System.Windows.Forms.Label();
+            this.lblCodigoPrecio = new System.Windows.Forms.Label();
             this.grpModificarDescripcion = new System.Windows.Forms.GroupBox();
             this.txtNuevaDescripcion = new System.Windows.Forms.TextBox();
             this.lblNuevaDescripcion = new System.Windows.Forms.Label();
             this.cmbModificarDescripcion = new System.Windows.Forms.ComboBox();
             this.btnModificarDescripcion = new System.Windows.Forms.Button();
-            this.lblCodigo = new System.Windows.Forms.Label();
+            this.lblCodigoDescripcion = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMostrar)).BeginInit();
             this.grpModificarPrecio.SuspendLayout();
             this.grpModificarDescripcion.SuspendLayout();
@@ -75,7 +75,7 @@
             this.grpModificarPrecio.Controls.Add(this.lblNuevoPrecio);
             this.grpModificarPrecio.Controls.Add(this.cmbModificarPrecio);
             this.grpModificarPrecio.Controls.Add(this.btnModifcar);
-            this.grpModificarPrecio.Controls.Add(this.lblNombrePrecio);
+            this.grpModificarPrecio.Controls.Add(this.lblCodigoPrecio);
             this.grpModificarPrecio.Location = new System.Drawing.Point(12, 12);
             this.grpModificarPrecio.Name = "grpModificarPrecio";
             this.grpModificarPrecio.Size = new System.Drawing.Size(303, 166);
@@ -101,11 +101,13 @@
             // 
             // cmbModificarPrecio
             // 
+            this.cmbModificarPrecio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbModificarPrecio.FormattingEnabled = true;
             this.cmbModificarPrecio.Location = new System.Drawing.Point(118, 73);
             this.cmbModificarPrecio.Name = "cmbModificarPrecio";
             this.cmbModificarPrecio.Size = new System.Drawing.Size(149, 26);
             this.cmbModificarPrecio.TabIndex = 15;
+            this.cmbModificarPrecio.SelectedIndexChanged += new System.EventHandler(this.cmbModificarPrecio_SelectedIndexChanged);
             // 
             // btnModifcar
             // 
@@ -118,14 +120,14 @@
             this.btnModifcar.UseVisualStyleBackColor = false;
             this.btnModifcar.Click += new System.EventHandler(this.btnModifcar_Click);
             // 
-            // lblNombrePrecio
+            // lblCodigoPrecio
             // 
-            this.lblNombrePrecio.AutoSize = true;
-            this.lblNombrePrecio.Location = new System.Drawing.Point(5, 76);
-            this.lblNombrePrecio.Name = "lblNombrePrecio";
-            this.lblNombrePrecio.Size = new System.Drawing.Size(68, 18);
-            this.lblNombrePrecio.TabIndex = 13;
-            this.lblNombrePrecio.Text = "Nombre:";
+            this.lblCodigoPrecio.AutoSize = true;
+            this.lblCodigoPrecio.Location = new System.Drawing.Point(5, 76);
+            this.lblCodigoPrecio.Name = "lblCodigoPrecio";
+            this.lblCodigoPrecio.Size = new System.Drawing.Size(59, 18);
+            this.lblCodigoPrecio.TabIndex = 13;
+            this.lblCodigoPrecio.Text = "Codigo:";
             // 
             // grpModificarDescripcion
             // 
@@ -133,13 +135,13 @@
             this.grpModificarDescripcion.Controls.Add(this.lblNuevaDescripcion);
             this.grpModificarDescripcion.Controls.Add(this.cmbModificarDescripcion);
             this.grpModificarDescripcion.Controls.Add(this.btnModificarDescripcion);
-            this.grpModificarDescripcion.Controls.Add(this.lblCodigo);
+            this.grpModificarDescripcion.Controls.Add(this.lblCodigoDescripcion);
             this.grpModificarDescripcion.Location = new System.Drawing.Point(321, 12);
             this.grpModificarDescripcion.Name = "grpModificarDescripcion";
             this.grpModificarDescripcion.Size = new System.Drawing.Size(308, 166);
             this.grpModificarDescripcion.TabIndex = 18;
             this.grpModificarDescripcion.TabStop = false;
-            this.grpModificarDescripcion.Text = "Modificar Precio";
+            this.grpModificarDescripcion.Text = "Modificar Descrpción";
             // 
             // txtNuevaDescripcion
             // 
@@ -159,6 +161,7 @@
             // 
             // cmbModificarDescripcion
             // 
+            this.cmbModificarDescripcion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbModificarDescripcion.FormattingEnabled = true;
             this.cmbModificarDescripcion.Location = new System.Drawing.Point(153, 73);
             this.cmbModificarDescripcion.Name = "cmbModificarDescripcion";
@@ -176,14 +179,15 @@
             this.btnModificarDescripcion.UseVisualStyleBackColor = false;
             this.btnModificarDescripcion.Click += new System.EventHandler(this.btnModificarDescripcion_Click);
             // 
-            // lblCodigo
+            // lblCodigoDescripcion
             // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(9, 76);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(59, 18);
-            this.lblCodigo.TabIndex = 13;
-            this.lblCodigo.Text = "Código:";
+            this.lblCodigoDescripcion.AutoSize = true;
+            this.lblCodigoDescripcion.Location = new System.Drawing.Point(9, 76);
+            this.lblCodigoDescripcion.Name = "lblCodigoDescripcion";
+            this.lblCodigoDescripcion.Size = new System.Drawing.Size(59, 18);
+            this.lblCodigoDescripcion.TabIndex = 13;
+            this.lblCodigoDescripcion.Text = "Código:";
+            this.lblCodigoDescripcion.Click += new System.EventHandler(this.lblCodigoDescripcion_Click);
             // 
             // frmMostrarModificarProducto
             // 
@@ -199,7 +203,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMostrarModificarProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Modificar y Mostrar Producttos";
+            this.Text = "Modificar y Mostrar Productos";
             this.Load += new System.EventHandler(this.frmMostrarModificarProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMostrar)).EndInit();
             this.grpModificarPrecio.ResumeLayout(false);
@@ -217,7 +221,7 @@
         private System.Windows.Forms.GroupBox grpModificarPrecio;
         private System.Windows.Forms.ComboBox cmbModificarPrecio;
         private System.Windows.Forms.Button btnModifcar;
-        private System.Windows.Forms.Label lblNombrePrecio;
+        private System.Windows.Forms.Label lblCodigoPrecio;
         private System.Windows.Forms.Label lblNuevoPrecio;
         private System.Windows.Forms.TextBox txtNuevoPrecio;
         private System.Windows.Forms.GroupBox grpModificarDescripcion;
@@ -225,6 +229,6 @@
         private System.Windows.Forms.Label lblNuevaDescripcion;
         private System.Windows.Forms.ComboBox cmbModificarDescripcion;
         private System.Windows.Forms.Button btnModificarDescripcion;
-        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.Label lblCodigoDescripcion;
     }
 }

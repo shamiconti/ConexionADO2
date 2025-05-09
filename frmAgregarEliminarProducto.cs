@@ -76,7 +76,7 @@ namespace pryContiConexionBD
                                 txtDescripcion.Text = "";
                                 mskPrecio.Text = "";
                                 mskStock.Text = "";
-                                cmbCategoria.Text = "";
+                                cmbCategoria.SelectedIndex = -1;
                             }
                         }
                     }
@@ -104,6 +104,8 @@ namespace pryContiConexionBD
                 ObjProductos.CargarComboModificarEliminar(cmbEliminarProducto);
 
                 MessageBox.Show("Producto eliminado correctamente.", "Eliminación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                cmbEliminarProducto.SelectedIndex = -1;
             }
             else
             {
